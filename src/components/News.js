@@ -36,7 +36,7 @@ export class News extends Component {
       totalResults: parsedData.totalResults,     //For taking total results from our data
       loading: false
     });
-    console.log(this.state.articles);
+    console.log("hi this article ",this.state.articles);
   }
   
   async componentDidMount(){
@@ -90,7 +90,7 @@ export class News extends Component {
     return (
       <div className="container my-3">
         <h2 className="text-center py-3" style={{textDecoration: "underline"}}>NewsDaily - Top Headlines</h2>
-        {(this.state.loading) && <Spinner/>}
+        {/* {(this.state.loading) && <Spinner/>}
         <div className="row">
             {!(this.state.loading) && this.state.articles.map((element)=>{
               return <div className="col-md-4" key={element.url}>
@@ -105,7 +105,7 @@ export class News extends Component {
                 />
             </div>
             })}
-        </div>
+        </div> */}
         <div className="container d-flex justify-content-between">
           <button disabled={this.state.page<=1} type="button" className="btn btn-dark" onClick={this.handlePrevClick}> &larr; Previous</button>
           <button disabled={this.state.page + 1 > Math.ceil(this.state.totalResults/this.props.pageSize)} type="button" className="btn btn-dark" onClick={this.handleNextClick}>Next &rarr; </button>
