@@ -36,6 +36,7 @@ export class News extends Component {
       totalResults: parsedData.totalResults,     //For taking total results from our data
       loading: false
     });
+    console.log(this.state.articles);
   }
   
   async componentDidMount(){
